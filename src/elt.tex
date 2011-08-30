@@ -22,17 +22,17 @@
 %  Add 'showpacs' option to make PACS codes appear
 \documentclass[aps,prl,twocolumn,showpacs,superscriptaddress,groupedaddress]{revtex4}  % for review and submission
 %\documentclass[aps,preprint,showpacs,superscriptaddress,groupedaddress]{revtex4}  % for double-spaced preprint
-\usepackage{graphicx}  % needed for figures
+\usepackage{graphicx,color}  % needed for figures
 \usepackage{dcolumn}   % needed for some tables
 \usepackage{bm}        % for math
 \usepackage{amssymb}   % for math
+
 %\usepackage{psfrag}
 %\usepackage{epsf}
 % avoids incorrect hyphenation, added Nov/08 by SSR
 \hyphenation{ALPGEN}
 \hyphenation{EVTGEN}
 \hyphenation{PYTHIA}
-
 
 \begin{document}
 
@@ -126,41 +126,40 @@ with $ v_0=F_0/\upsilon k_{y}^{2}$ and $\upsilon$ is the kinematic viscosity,whi
 the Kolmogorov flow is known to be unstable and a secondary steady flow appears which consists of a periodic configuration of stationary vortices \cite{posch97}.
 Indeed, a remarkable feature of the Kolmgorov flow is that even in the turbulent regime the mean velocity are accurately described by sinusoidal frofiles\cite{boffetta05}.
 Here for this particular flow, the Reynolds number $Re=\frac{UL}{\upsilon}$ and the Weissenberg number $Wi=\frac{UL}{\tau}$, are defined in term of the amplitude U of the mean velocity,which is 
-measured from the velocity profiles,$\tau$ is relaxation time of polymer.
-
-First we check the physical phenomenon in solvent at vanishing Renold number.At Re=1.0
-we get the enegy spectrum,Fig.\ref{fig:spesols}\\As we know in small renold number,and the same time the viscosity of the flow is small,the energy density will be the same 
-along the scale,so the energy in two dimensional will be propotional to wavenumber.
+measured from the velocity profiles,$\tau$ is relaxation time of polymer.\\
+In solvent only with thermal stochastic force the energy density is distributed equally in different scales,so the energy,the intergration of energy density in wavelength range
+shouls be porpotional to wavenumber.Our simulation results fit this power-law perfectly.Note that in New-tonian flow the critical Renold number for instibility of Kolmogorov flow is $\sqrt{2}$ with respect to large-scale perturbations,i,e.,with wavelength much larger than L.
+In our case the wavelength is equal to L,so the Renold number is larger than $6$ \cite{posch97}.We consider solvent at Re=1,in order to prove that the instability in polymer solution is 
+only caused by presence of polymers. In solvent we set visocity $\mu = 2\times10^{-3}$, the number of particles is $36\times36$.theoretical physical phenomenon in solvent at vanishing Renold number.At Re=1.0
+we get the enegy spectrum with an exponent $-0.7$,Fig.~\ref{fig:spesols}\\In the flow with weak viscosity at small Renold number,the depletion of the the energy is negligible 
+with respect to the injected energy,so the  energy density keeps almost equal in different scales.Figure.\ref{fig:vorsols} shows one snapshot of the two-dimensional 
+vorticiyt field in solvent at Re=1.the flow in this regime is not secondary flow and there is no big vortex structures.\\
 \begin{figure}
  \includegraphics[scale=0.35]{vorsols}
-\label{fig:spesols}
+\label{fig:vorsols}
 \caption{Vorticity field in solvent at Re=1}
-\end{figure} \\
+\end{figure} 
 \begin{figure}
  \includegraphics[scale=0.35]{spesols}
 \label{fig:spesols}
-\caption{Enegy spectrum in solvent at Re=1}
-\end{figure} \\
-
-Polymer solution--At Re=1 Wi=29 we get the vorticity field and spectrum,Fig.\ref{fig:spepols}
-From the picture we can see the vortex structure is not sontinous,this may be resulted from the small domain and the length of polymer is short.
-The energy spectrum is k-1,which is not the same as in the DNS simulation.The reason is the model of the polymer is different,in DNS is Oldroyd-B,in ouy case is more accurate model
-FENE-P model.Then another reason is the viscosicty in our case is 0.5,and the resolution is small(32*32).
-model
+\caption{Enegy spectrum in solvent at Re=1,the plateau at high $k$ may be due to the numberical noise in SDPD method and restricted spatial resolution of the method}
+\end{figure} 
+In Polymer solution we investigate the flow at Re=1 and Wi=29, in which the relaxation time of polymer $\tau$ is 
+calculated from the fitting of autocorrelation function of end to end distance vector of polymer in a thermal stochastic simulaiton.
+We observe some irregular vortexes  as shown in Fig.\ref{fig:vorpols}. Note that the vortex structure is not continous as in DNS with linear model \cite{berti08}.
+This may be resulted from nonlinear model and the thermal fluctuations.
+Fig.\ref{fig:spepols} show the power of velocity fluctuations over wavelength.The spectrum exhibits power lay decay with exponent $-1.1$.
 \begin{figure}
  \includegraphics[scale=0.35]{vorpols}
 \label{fig:vorpols}
-\caption{Energy spectrum in polymer solution at Re=1,Wi=30}
-\end{figure}\\
+\caption{Energy spectrum in polymer solution at Re=1,Wi=29}
+\end{figure}
 \begin{figure}
  \includegraphics[scale=0.35]{spepols}
 \label{fig:spepols}
-\caption{Energy spectrum in polymer solution at Re=1,Wi=30}
-\end{figure}\\
-The relaxation time of polymer 
- $\tau$ is relaxation time of polymer,which is 
-calculated from the fitting of autocorrelation functio of end to end distance vector of polymer in a thermal stochastic simulaiton.
-The investigation based on longer polymer molecules and high viscosicty will be presented in further work.
+\caption{Energy spectrum in polymer solution at Re=1,Wi=29}
+\end{figure}
+The investigation based on longer polymer molecules and high viscosicty will be presented in further work.\\
 \bibliography{elt}
 \bibliographystyle{unsrt}
 \end{document}
