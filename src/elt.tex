@@ -20,12 +20,12 @@
 % Choose pra, prb, prc, prd, pre, prl, prstab, or rmp for journal
 %  Add 'draft' option to mark overfull boxes with black boxes
 %  Add 'showpacs' option to make PACS codes appear
-\documentclass[aps,prl,twocolumn,showpacs,superscriptaddress,groupedaddress]{revtex4}  % for review and submission
+\documentclass[aps,pre,twocolumn,showpacs,superscriptaddress,groupedaddress]{revtex4}  % for review and submission
 %\documentclass[aps,preprint,showpacs,superscriptaddress,groupedaddress]{revtex4}  % for double-spaced preprint
 \usepackage{graphicx,color}  % needed for figures
-\usepackage{dcolumn}   % needed for some tables
+\usepackage{dcolumn}  
+\usepackage{amssymb}   % for math % needed for some tables
 \usepackage{bm}        % for math
-\usepackage{amssymb}   % for math
 
 %\usepackage{psfrag}
 %\usepackage{epsf}
@@ -37,12 +37,12 @@
 \begin{document}
 
 % The following information is for internal review, please remove them for submission
-\widetext
-\leftline{Version xx as of \today}
-\leftline{Primary authors: Joe E. Physics}
-\leftline{To be submitted to PRL}
-\leftline{Comment to {\tt d0-run2eb-nnn@fnal.gov} by xxx, yyy}
-\centerline{\em D\O\ INTERNAL DOCUMENT -- NOT FOR PUBLIC DISTRIBUTION}
+%\widetext
+%\leftline{Version xx as of \today}
+%\leftline{Primary authors: Joe E. Physics}
+%\leftline{To be submitted to PRL}
+%\leftline{Comment to {\tt d0-run2eb-nnn@fnal.gov} by xxx, yyy}
+%\centerline{\em D\O\ INTERNAL DOCUMENT -- NOT FOR PUBLIC DISTRIBUTION}
 
 % the following line is for submission, including submission to the arXiv!!
 %\hspace{5.2in} \mbox{Fermilab-Pub-04/xxx-E}
@@ -135,12 +135,12 @@ we get the enegy spectrum with an exponent $-0.7$,Fig.~\ref{fig:spesols}\\In the
 with respect to the injected energy,so the  energy density keeps almost equal in different scales.Figure.\ref{fig:vorsols} shows one snapshot of the two-dimensional 
 vorticiyt field in solvent at Re=1.the flow in this regime is not secondary flow and there is no big vortex structures.\\
 \begin{figure}
- \includegraphics[scale=0.35]{vorsols}
+ \includegraphics[scale=0.35]{img/vorsols}
 \label{fig:vorsols}
 \caption{Vorticity field in solvent at Re=1}
 \end{figure} 
 \begin{figure}
- \includegraphics[scale=0.35]{spesols}
+ \includegraphics[scale=0.5]{img/spesols}
 \label{fig:spesols}
 \caption{Enegy spectrum in solvent at Re=1,the plateau at high $k$ may be due to the numberical noise in SDPD method and restricted spatial resolution of the method}
 \end{figure} 
@@ -150,12 +150,12 @@ We observe some irregular vortexes  as shown in Fig.\ref{fig:vorpols}. Note that
 This may be resulted from nonlinear model and the thermal fluctuations.
 Fig.\ref{fig:spepols} show the power of velocity fluctuations over wavelength.The spectrum exhibits power lay decay with exponent $-1.1$.
 \begin{figure}
- \includegraphics[scale=0.35]{vorpols}
+ \includegraphics[scale=0.35]{img/vorpols}
 \label{fig:vorpols}
 \caption{Energy spectrum in polymer solution at Re=1,Wi=29}
 \end{figure}
 \begin{figure}
- \includegraphics[scale=0.35]{spepols}
+ \includegraphics[scale=0.35]{img/spepols}
 \label{fig:spepols}
 \caption{Energy spectrum in polymer solution at Re=1,Wi=29}
 \end{figure}
